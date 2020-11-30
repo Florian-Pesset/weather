@@ -23,7 +23,7 @@ class CityCherch extends Component {
       )
       .then(({ response }) =>
         this.setState({
-          getData: response,
+          getData: response.data,
         })
       );
   }

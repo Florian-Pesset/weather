@@ -1,7 +1,7 @@
 import React from "react";
 
-const CurrentWeather = (props) => {
-  const { current, location } = props.dataCity;
+const CurrentWeather = ({ dataCity }) => {
+  const { current, location } = dataCity;
   return (
     <div>
       <h2>{location.name}</h2>
