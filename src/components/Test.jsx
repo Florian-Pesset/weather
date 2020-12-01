@@ -3,11 +3,11 @@ import axios from "axios";
 import WeatherLocation from "./WeatherLocation";
 import CurrentWeather from "./CurrentWeather";
 
-class CityCherch extends Component {
+class TEST extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      getData: {},
+      getData: "",
     };
     this.getCityData = this.getCityData.bind(this);
   }
@@ -19,7 +19,7 @@ class CityCherch extends Component {
   getCityData() {
     axios
       .get(
-        "http://api.weatherstack.com/current?access_key=780fc7cd0f7634738ded32442b42383b&query=Nantes"
+        "http://api.openweathermap.org/data/2.5/weather?q=Nantes,fr&APPID=b5486ab24e040ab212b4f65582a885ab"
       )
       .then(({ response }) =>
         this.setState({
@@ -34,13 +34,13 @@ class CityCherch extends Component {
     return (
       <div>
         <WeatherLocation />
-        <CurrentWeather dataCity={this.stategetData} />
+        <CurrentWeather dataCity={this.state.getData} />
       </div>
     );
   }
 }
 
-export default CityCherch;
+export default TEST;
 
 /*
 import React, { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ import axios from "axios";
 import WeatherLocation from "./WeatherLocation";
 import CurrentWeather from "./CurrentWeather";
 
-const CityCherch = () => {
+const TEST = () => {
   const [getData, setGetData] = useState();
 
   const getCityData = () => {
@@ -73,5 +73,5 @@ const CityCherch = () => {
   );
 };
 
-export default CityCherch;
+export default TEST;
 */

@@ -8,7 +8,7 @@ const WeatherLocation = () => {
     setUserInput(e.target.value);
   };
 
-  const adduserInput = (e) => {
+  const adduserInput = () => {
     setCity(userInput);
   };
 
