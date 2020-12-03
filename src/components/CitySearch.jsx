@@ -1,31 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import WeatherLocation from "./WeatherLocation";
 import CurrentWeather from "./CurrentWeather";
+import CityContext from "../contexts/CityContext";
 
 const CitySearch = () => {
-  const [getData, setData] = useState({});
+  const [getData, setData] = useState("");
+  const { city } = useContext(CityContext);
 
   useEffect(() => {
-    getApi();
-  }, []);
+    getCurrentWeather();
+    console.log(getData);
+  }, [city]);
 
-  const getApi = () => {
+  const getCurrentWeather = () => {
     axios
       .get(
-        "http://api.openweathermap.org/data/2.5/weather?q=Nantes,fr&APPID=b5486ab24e040ab212b4f65582a885ab"
+        `http://api.openweathermap.org/data/2.5/weather?q=${city},fr&APPID=b5486ab24e040ab212b4f65582a885ab`
       )
       .then((response) => {
         setData(response.data);
-        console.log(response.data);
       });
   };
 
-  console.log(getData);
   return (
     <div>
       <WeatherLocation />
-      <CurrentWeather dataCity={getData} />
+      {getData && <CurrentWeather getData={getData} />}
     </div>
   );
 };

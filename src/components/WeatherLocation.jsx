@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import CityContext from "../contexts/CityContext";
 
 const WeatherLocation = () => {
   const [userInput, setUserInput] = useState("");
-  const [city, setCity] = useState("");
+  const { city, setCity } = useContext(CityContext);
 
   const onChange = (e) => {
     setUserInput(e.target.value);
@@ -21,8 +22,7 @@ const WeatherLocation = () => {
         Enter
       </button>
 
-      <h3>Ville choisie:</h3>
-      <p>{city}</p>
+      <h3>{city}</h3>
     </div>
   );
 };
