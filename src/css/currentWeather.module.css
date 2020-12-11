@@ -1,0 +1,30 @@
+.day {
+  background-color: rgb(240, 190, 25);
+  background-image: url("../img/day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.night {
+  background-color: rgb(4, 4, 7);
+  background-image: url("../img/lune.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.day,
+.night {
+  width: 20vw;
+  height: 97vh;
+  padding: 1em;
+  box-shadow: 10px 5px 5px rgb(19, 14, 14);
+  color: rgb(4, 4, 7);
+}
+
+.city {
+  background-color: whitesmoke;
+  opacity: 0.8;
+  padding: 1em;
+  box-shadow: 5px 5px 5px rgb(19, 14, 14);
+  border-radius: 0.5em;
+}

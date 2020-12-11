@@ -1,0 +1,16 @@
+.forecast {
+  width: 70vw;
+  height: 50vh;
+  padding: 1em;
+  margin: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.dayWeek {
+  background-color: whitesmoke;
+  color: black;
+  padding: 1.5em;
+  width: 15vw;
+  border-radius: 0.5em;
+}
