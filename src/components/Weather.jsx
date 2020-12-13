@@ -14,9 +14,11 @@ const Weather = () => {
   const { city } = useContext(CityContext);
 
   useEffect(() => {
+    const API_KEY = process.env.REACT_APP_API_KEY;
+
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=24c738f7df664b6fb1f143056200712&q=${city}&days=3`
+        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=3`
       )
       .then((response) => setData(response.data));
   }, [city]);
