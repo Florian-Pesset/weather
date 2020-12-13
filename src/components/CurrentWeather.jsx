@@ -76,20 +76,25 @@ function CurrentWeather({ getData }) {
         <h1>Current weather</h1>
         <hr />
         <h2>{name}</h2>
-        <img src={condition.icon} alt={condition.text} />
-        <h3>{temp_c}°C</h3>
         <p>
           {region} {country}
         </p>
         <p>{localtime}</p>
-        <h3>{condition.text}</h3>
+
+        <h3>Now</h3>
+        <img src={condition.icon} alt={condition.text} />
+        <p>{condition.text}</p>
+        <p>{temp_c}°C</p>
+
         <h3>Wind status</h3>
         <p>Speed: {wind_kph} km/h</p>
         <p>Wind degree: {wind_dir}</p>
-
         <img src={wind(wind_dir)} alt={wind_dir} />
-        <h3>Cloud cover: {cloud}%</h3>
-        <h3>Humidity: {humidity}%</h3>
+
+        <h3>Cloud cover</h3>
+        <p>{cloud}%</p>
+        <h3>Humidity</h3>
+        <p>{humidity}%</p>
       </div>
     </div>
   );
