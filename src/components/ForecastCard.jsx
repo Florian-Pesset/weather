@@ -6,7 +6,8 @@ function ForecastCard({ forecast }) {
 
   return (
     <div className={styles.dayWeek}>
-      <p>{weekday}</p>
+      <h2>{weekday}</h2>
+      <hr />
       <h3>{forecast.day.condition.text}</h3>
       <img
         src={forecast.day.condition.icon}
