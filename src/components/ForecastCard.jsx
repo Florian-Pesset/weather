@@ -20,6 +20,4 @@ function ForecastCard({ forecast }) {
   );
 }
 
-ForecastCard.propTypes = {};
-
 export default ForecastCard;

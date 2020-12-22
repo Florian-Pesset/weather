@@ -81,7 +81,7 @@ function CurrentWeather({ getData }) {
         </p>
         <p>{localtime}</p>
 
-        <h3>Now</h3>
+        <h2>Today's Hightlights</h2>
         <img src={condition.icon} alt={condition.text} />
         <p>{condition.text}</p>
         <p>{temp_c}°C</p>
@@ -89,7 +89,7 @@ function CurrentWeather({ getData }) {
         <h3>Wind status</h3>
         <p>Speed: {wind_kph} km/h</p>
         <p>Wind degree: {wind_dir}</p>
-        <img src={wind(wind_dir)} alt={wind_dir} />
+        <img src={wind(wind_dir)} alt={wind_dir} className={styles.windir} />
 
         <h3>Cloud cover</h3>
         <p>{cloud}%</p>

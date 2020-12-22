@@ -1,3 +1,17 @@
 .location {
   width: 100%;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textField {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  align-items: center;
+}

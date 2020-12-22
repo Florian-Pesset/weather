@@ -1,5 +1,12 @@
 .weather {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 992px) {
+  .weather {
+    flex-direction: row;
+  }
 }
