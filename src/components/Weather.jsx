@@ -18,7 +18,7 @@ const Weather = () => {
 
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=3`
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=3`
       )
       .then((response) => setData(response.data));
   }, [city]);
